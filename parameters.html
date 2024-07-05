@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.css"/>
+		<title>Parameters</title>
+		<style>
+			table {
+				border-collapse: collapse;
+				width: 55%;
+			}
+
+			th {
+				padding: 8px;
+				text-align: left;
+				border-top: 2px solid #000;
+				border-bottom: 2px solid #000;
+				color: #000;
+				border-left: none;
+				border-right: none;
+			}
+			
+			td {
+				padding: 8px;
+				text-align: left;
+				border-bottom: 1px solid #ddd;
+				border-left: none;
+				border-right: none;
+			}
+			
+			/* table proportion */
+			th:nth-child(1),
+			td:nth-child(1) {
+				width: 30%;
+			}
+
+			th:nth-child(2),
+			td:nth-child(2) {
+				width: 15%;
+			}
+
+			th:nth-child(4),
+			td:nth-child(4) {
+				width: 60%;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div class="head">
+				<p>LectureMath</p>
+			</div>
+			<div class="menu_vertical">
+				<ul class="menu_list">
+					<li>
+						<a href="rules_for_dataset.html">Dataset</a>
+					</li>
+					<li>
+						<a href="annotator.html">Annotator</a>
+					</li>
+					<li>
+						<a href="parameters.html">Parameter</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="main_content">
+			<h1>Parameters</h1>
+			<section>
+				<h2 style="color: tomato;">Input/Output Path</h2>
+				<table class="param_table">
+					<tr>
+						<th>Name</th>
+						<th>DataType</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>VIDEO_DATABASE_PATH</td>
+						<td>str</td>
+						<td>Relative path of file which has lecture videos' database</td>
+					</tr>
+					<tr>
+						<td>VIDEO_FILES_PATH</td>
+						<td>str</td>
+						<td>Relative path of folder where lecture videos are located<br/>Current location: lecturemath/ACCESS2021_release</td>
+					</tr>
+					<tr>
+						<td>OUTPUT_PATH</td>
+						<td>str</td>
+						<td>Relative path of directory where results will be located</td>
+					</tr>
+					<tr>
+						<td>VIDEO_BASED_ANNOTATIONS</td>
+						<td>int</td>
+						<td>Set to "1"(True) to load the video directly |<br/> 
+	                    Set to "0"(False) to load sequence of images from OUTPUT_FRAME_EXPORT when your video has synchronization issues after you start jumping around the video.
+
+					</td>
+					</tr>
+					<tr>
+						<td>FRAME_EXPORT_FPS</td>
+						<td>float</td>
+						<td>FPS used to extract images from original video</td>
+					</tr>
+					<tr>
+						<td>OUTPUT_FRAME_EXPORT</td>
+						<td>str</td>
+						<td>Relative path where VOC images from video will be stored</td>
+					</tr>
+					<tr>
+						<td>OUTPUT_FRAME_EXPORT_FORMAT</td>
+						<td>float</td>
+						<td>Format of VOC images</td>
+					</tr>
+					<tr>
+						<td>OUTPUT_FRAME_EXPORT_QUALITY</td>
+						<td>float</td>
+						<td>Quality of VOC images</td>
+					</tr>
+				</table>
+				<br/>
+				<br/>
+				<h2 style="color: tomato;">Binarization using FCN</h2>
+				<table>
+					<tr>
+						<th>Name</th>
+						<th>DataType</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>FCN_BINARIZER_USE_CUDA</td>
+						<td>bool</td>
+						<td>CUDA usage status parameter<br/>You can use CUDA = True | You can't use CUDA = False</td>
+					</tr>
+					<tr>
+						<td>FCN_BINARIZER_SAVE_BINARY</td>
+						<td>bool</td>
+						<td>Write Description</td>
+					</tr>
+					<tr>
+						<td>FCN_BINARIZER_SAVE_BINARY_PATH</td>
+						<td>str</td>
+						<td>Write Description</td>
+					</tr>
+				</table>
+				<pre>...
+		
+		
+
+			</pre>
+			</section>
+		</div>
+	</body>
+</html>
+
+
