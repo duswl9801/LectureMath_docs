@@ -25,9 +25,9 @@ The c file *accessmath_lib.c* needs to be re-compile for non-windows users. We p
 1. Check VIDEO_DATABASE_PATH, VIDEO_FILES_PATH, OUTPUT_PATH, in configuration file.
 2. Put database file in VIDEO_DATABASE_PATH, and lecture videos which will be annotated in VIDEO_FILES_PATH. Make output/annotations, images, models, summaries, temporal folders in OUTPUT_PATH.
 3. Export frames first before use annotation tool to prevent lagging. [Export Frames](#export_frames)
-4. Run the annotation tool. [Annotation Tool](#anntoation_tool)
+4. Run the annotation tool. [Annotation Tool](#video-annotation)
 
-#### Export Frames(required for annotation tools) {#export_frames}
+#### Export Frames(required for annotation tools)
 It exports frames from original videos for Video annotation. The FPS of the original video is 30 and we export `FRAME_EXPORT_FPS` frames per second given in the [config] to ensure the annotator work correctly.
 
        Command: 
@@ -48,7 +48,7 @@ It exports frames from original videos for Video annotation. The FPS of the orig
        
 
   
-#### Video Annotation {#annotation_tool}
+#### Video Annotation
 ![alt text](https://github.com/adaniefei/Other/blob/images/gt_annotator.png?raw=true "Logo Title Text 1")
 
 This annotator is used to label the intervels of speaker action and export the annotations. For each interval, the lable contains the beginning and ending frame number of the interval, and the action of the speaker during the interval. The annotation data for this paper is in *data\output\annotations*. 
