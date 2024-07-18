@@ -24,7 +24,7 @@ The c file *accessmath_lib.c* needs to be re-compile for non-windows users. We p
 #### How to Set Annotation Tool
 1. Check VIDEO_DATABASE_PATH, VIDEO_FILES_PATH, OUTPUT_PATH, in configuration file.
 2. Put database file in VIDEO_DATABASE_PATH, and lecture videos which will be annotated in VIDEO_FILES_PATH. Make output/annotations, images, models, summaries, temporal folders in OUTPUT_PATH.
-3. Export frames first before use annotation tool to prevent lagging. [Export Frames](#export_frames)
+3. Export frames first before use annotation tool to prevent lagging. [Export Frames](#export-framesrequired-for-annotation-tools)
 4. Run the annotation tool. [Annotation Tool](#video-annotation)
 
 #### Export Frames(required for annotation tools)
