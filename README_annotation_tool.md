@@ -97,8 +97,8 @@ The tool also has keyboard shortcuts available to make your annotation easier.
 - "Copy" feature        
  ![alt text](https://github.com/duswl9801/LectureMath_docs/blob/main/img/copy_btn.png?raw=true "copy")
 
-	When the "Copy" button is used after selecting an object,
-  	the new object, which has the same shape, and correlated name as the selected object, is created near it.
+		When the "Copy" button is used after selecting an object,
+  		the new object, which has the same shape, and correlated name as the selected object, is created near it.
 
 - "Re-Color" feature
 
