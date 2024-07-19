@@ -71,11 +71,11 @@ The tool also has keyboard shortcuts available to make your annotation easier.
        
        [<]/[>]: Copy the position of the current video object from previous/next keyframe
        
-- Right-Clinking
+- Right-Clicking
 		
-		Unintended moving of object can be prevented by clinking objects with right mouse button. 
+		Unintended moving of objects can be prevented by clicking objects with the right mouse button. 
 		
-		Right-clicking on the frame shows objects which was created at that location. 
+		Right-clicking on the frame shows objects that were created at that location. 
 	   
 - "Split" feature for "QUAD" object
 ![alt text](https://github.com/adaniefei/Other/blob/images/Quad_split.png?raw=true "split-quad")
@@ -97,19 +97,19 @@ The tool also has keyboard shortcuts available to make your annotation easier.
 - "Copy" feature        
  ![alt text](https://github.com/duswl9801/LectureMath_docs/blob/main/img/copy_btn.png?raw=true "copy")
 
-        When "Copy" button is used after selecting an object, the new object which has same shape, 
-        type and correlated name with the selected object is created near it. 
+        When the "Copy" button is used after selecting an object,
+  	the new object, which has the same shape, and correlated name as the selected object, is created near it. 
 	
 - "Re-Color" feature
 
-	    "Re-Color" feature is used to change the color of selected object. 
-	    It's useful when the randomly generated color of object is simmilar with the background.	
+	"Re-Color" feature is used to change the color of selected object. 
+	It's useful when the randomly generated color of the object is similar with the background.	
 	
 - "Hide" and "Show" features
 ![alt text](https://github.com/duswl9801/LectureMath_docs/blob/76142732d43d3f2c2089a942261585549dc7e29f/img/hide_btn.png?raw=true "hide")
 ![alt text](https://github.com/duswl9801/LectureMath_docs/blob/76142732d43d3f2c2089a942261585549dc7e29f/img/show_btn.png?raw=true "show")
 
-        Hide and Show features are used when the same objects appear and disappear from the frame, such as changing scenes.
+        Hide and Show features are used when the same objects appear and disappear from the frame, such as scene transition.
 
 ------
 
