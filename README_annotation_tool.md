@@ -94,14 +94,16 @@ The tool also has keyboard shortcuts available to make your annotation easier.
        - (3): Select the QUAD object.
               The additional nodes can be seen and modified as the object is selected.
           
-- "Copy feature"
+- "Copy" feature        
  ![alt text](https://github.com/duswl9801/LectureMath_docs/blob/main/img/copy_btn.png?raw=true "copy")
 
-        When "Copy" button is used after selecting an object, the new object which has same shape, type and correlated name with the selected object is created near it. 
+        When "Copy" button is used after selecting an object, the new object which has same shape, 
+        type and correlated name with the selected object is created near it. 
 	
 - "Re-Color" feature
 
-	    "Re-Color" feature is used to change the color of selected object. It's useful when the randomly generated color of object is simmilar with the background.	
+	    "Re-Color" feature is used to change the color of selected object. 
+	    It's useful when the randomly generated color of object is simmilar with the background.	
 	
 - "Hide" and "Show" features
 ![alt text](https://github.com/duswl9801/LectureMath_docs/blob/76142732d43d3f2c2089a942261585549dc7e29f/img/hide_btn.png?raw=true "hide")
