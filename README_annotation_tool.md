@@ -102,7 +102,7 @@ The tool also has keyboard shortcuts available to make your annotation easier.
 	
 - "Re-Color" feature
 
-	"Re-Color" feature is used to change the color of selected object. 
+	"Re-Color" feature is used to change the color of selected object.
 	It's useful when the randomly generated color of the object is similar with the background.	
 	
 - "Hide" and "Show" features
