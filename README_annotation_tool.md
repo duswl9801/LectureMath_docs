@@ -1,5 +1,5 @@
-# vid_annotation_tool
-Stand-alone version of the annotation tool from the original AccessMath repo.
+# Video Annotation Tool
+Stand-alone version of the annotation tool from the original AccessMath repo. [AccessMath](https://github.com/adaniefei/AccessMath_Pose.git)
 
 ## Code
 This tool is tested and intended for usage with **Python 3.6+**.
@@ -94,23 +94,20 @@ The tool also has keyboard shortcuts available to make your annotation easier.
        - (3): Select the QUAD object.
               The additional nodes can be seen and modified as the object is selected.
           
-- "Copy" feature
-![alt text](https://github.com/duswl9801/LectureMath_docs/blob/main/img/copy_btn.png?raw=true "copy") 
+- "Copy feature"
+ ![alt text](https://github.com/duswl9801/LectureMath_docs/blob/main/img/copy_btn.png?raw=true "copy")
 
-	When "Copy" button is used after selecting an object, the new object which has same shape, type and correlated name with the selected object is created near it. 
+        When "Copy" button is used after selecting an object, the new object which has same shape, type and correlated name with the selected object is created near it. 
 	
 - "Re-Color" feature
 
-	"Re-Color" feature is used to change the color of selected object. It's useful when the randomly generated color of object is simmilar with the background.	
+	    "Re-Color" feature is used to change the color of selected object. It's useful when the randomly generated color of object is simmilar with the background.	
 	
 - "Hide" and "Show" features
 ![alt text](https://github.com/duswl9801/LectureMath_docs/blob/76142732d43d3f2c2089a942261585549dc7e29f/img/hide_btn.png?raw=true "hide")
 ![alt text](https://github.com/duswl9801/LectureMath_docs/blob/76142732d43d3f2c2089a942261585549dc7e29f/img/show_btn.png?raw=true "show")
 
-    Hide and Show features are used when the same objects appear and disappear from the frame, such as changing scenes. 
-    
-    
-
+        Hide and Show features are used when the same objects appear and disappear from the frame, such as changing scenes.
 
 ------
 
