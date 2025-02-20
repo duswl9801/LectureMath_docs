@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.css"/>
+		<title>Annotation</title>
+		<style>
+			th{
+				border-bottom: 1px solid #000;
+				border-right: 1px solid #000;
+				background: #cacfd2;
+				padding: 5px;
+				padding-right: 10px;
+			}
+			
+			td{
+				border-right: 1px solid #000;
+				padding: 5px;
+				padding-right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div class="head">
+				<p>LectureMath</p>
+			</div>
+			<div class="menu_vertical">
+				<ul class="menu_list">
+					<li>
+						<a href="rules_for_dataset.html">Dataset</a>
+					</li>
+					<li>
+						<a href="annotation.html">Annotation</a>
+					</li>
+					<li>
+						<a href="parameters.html">Parameter</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="main_content">
+			<h1>Annotation</h1>
+			<section>
+				<h2>Instruction of Annotation Tool</h2>
+				<a href="https://github.com/adaniefei/vid_annotation_tool?tab=readme-ov-file#vid_annotation_tool">Annotation Tool Explaination</a>
+			</section>
+			<section>
+				<h2>Annotation Rules</h2>
+				<ul>
+					<li>Fix speaker's location at the top-left corner.</li>
+					<li>Object naming. 
+						<div class="annotator_table">
+							<table>
+								<tr>
+									<th>Type</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>hw</td>
+									<td>hand-written</td>
+								</tr>
+								<tr>
+									<td>ts</td>
+									<td>typeset</td>
+								</tr>
+								<tr>
+									<td>speaker</td>
+									<td>speaker</td>
+								</tr>
+								<tr>
+									<td>logo</td>
+									<td>logo</td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<th>Type</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>tx</td>
+									<td>text</td>
+								</tr>
+								<tr>
+									<td>me</td>
+									<td>mathematical expressions</td>
+								</tr>
+								<tr>
+									<td>gr</td>
+									<td>graph</td>
+								</tr>
+							</table>
+						</div>
+						<p style="margin: 5px">Example) hw_me_005 : The fifth hand-written mathematical expression object.</p>
+					</li>
+					<li>Generate an object after finishing the speaker's writing, i.e. when one can see the whole object.</li>
+					<!-- new -->
+					<li>If the content on the board remains invisible due to luminosity, even after the speaker has finished writing,<br/>
+						the annotation should be annotated when it becomes visible.</li>
+					<li>Don't annotate if the object stays on the frame for less than 7 seconds.</li>
+					<li>The border of the object should fully surround the selected content.</li>
+					<li>Avoid overlapping between objects whenever possible.</li>
+					<li>If the object's shape changes, copy the object's previous position at the point where the change begins to prevent interpolation.</li>
+					<li>When you use the 'hide' and 'show' functions on the annotation tool, add objects at the start and end frames of transition.<br/>
+						This will prevent interpolation.</li>
+						
+					<li>When the portion of an object is being deleted and replaced, annotate the change as a new object.</li>
+					<br/>
+					<li>Text should always be one line.</li>
+					<img src="https://github.com/duswl9801/LectureMath_docs/blob/98e7d4a2701ff47fdb2f31b29a176884f6d981ae/img/text_one_line.png?raw=true" width="200" height="100"/>
+					<li>Create objects along the shape of the graph for the graph annotation.</li>
+					<li>Whenever possible to express the contents in LaTex, annotate them as mathematical expressions.  </li>
+					<li>Annotate highlighted graphs, for example underlines or diagrams above the content, as separate entities from the highlighted content.</li>
+					<li>Annotate as separate entities the highlighted content and graphs; for example, underlines or diagrams above the content.</li>
+					<br/>
+					<li>When the formula is a mix of text, mathematical expression, and graph (ex. side<sup>2</sup>->area), annotate the entire formula as mathematical expression.</li>
+					<li>Arrows can be mathematical expressions or graphs, depending on the situation. Irregularly shaped arrows are classified into graphs.</li>
+					<li>Units like cm can be either mathematical expressions or texts. Annotate as mathematical expression when the unit is with math formula.</li>
+					<img src="https://github.com/duswl9801/LectureMath_docs/blob/98e7d4a2701ff47fdb2f31b29a176884f6d981ae/img/unit.png?raw=true" width="100" height="50"/>
+					<li>Enumerations that are symantically expressed text, like numbers in chapters or choices in multiple-choice questions, are annotated as text.</li><br/>
+					
+					<li>Annotate / or \ (slash) to cross out numbers, as the part of the mathematical expression object.</li>
+					<img src="https://github.com/duswl9801/LectureMath_docs/blob/98e7d4a2701ff47fdb2f31b29a176884f6d981ae/img/cross_out_slash.png?raw=true" width="100" height="50"/>
+					<!-- new -->
+					<li>If a slash extends across two mathematical expressions, it should be annotated as a separate object.</li>
+					
+				</ul>
+			</section>
+			<br/>
+			<p style="color: red">Before export segments and key-frames, please set VIDEO_BASED_ANNOTATIONS in the configuration file to 1 so that the program can extract high-quality key-frames.</p>
+			<section>
+				<h2>Video Segments</h2>
+				<p>
+				- The video is divided into semantic temporal segments, sub topics, and unique content which is not continuous; typically, it is the point where a content deletion event occurs. (not erroneously)<br/>
+				- Try to get a segment point where the objects involved from the previous segment are all erased.<br/>
+				- Segment the video when the subtitles inform important content. 
+				</p>
+			</section>
+			<section>
+				<h2>Key-Frames</h2>
+				<p>
+				- Key-frames represent each video segment. Key-frames show all the objects on the lecture board. 
+				Use two key-frames to involve all the objects on the board if no frames in the segment show the entirity of the objects.<br/><br/>
+				[Example of a good key-frame]<br/>
+					<img src="https://github.com/duswl9801/LectureMath_docs/blob/98e7d4a2701ff47fdb2f31b29a176884f6d981ae/img/key_frame_ex.png?raw=true" width="600" height="300"/>
+					<br/><br/>
+				- Avoid using extreme frames as key-frames like the beginning, the end, and the exact transition frames.<br/>
+				- For key-frames, try to take frames without the speaker or the speaker not facing the camera.<br/>
+				<!-- new -->
+				- For a moving typeset video segment, a single key-frame is sufficient. <br/>
+				<!-- new -->
+				- If a video segment contains no written content, saving a key-frame is not required.<br/>
+				</p>
+			</section>
+		</div>
+	</body>
+</html>
